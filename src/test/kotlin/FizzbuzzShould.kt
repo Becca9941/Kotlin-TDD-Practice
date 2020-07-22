@@ -10,16 +10,16 @@ class FizzbuzzShould {
         assertThat(true, equalTo(true))
     }
     @Test
-    fun doNothingWhenNotDivisibleBy3Or5() {
-        assertEquals("1", Fizzbuzz(1).fizzbuzz())
-        assertEquals("2", Fizzbuzz(2).fizzbuzz())
-        assertEquals("4", Fizzbuzz(4).fizzbuzz())
+    fun notDivisibleBy3() {
+        assertEquals("1", Fizzbuzz(1).notDivisibleBy3())
+        assertEquals("2", Fizzbuzz(2).notDivisibleBy3())
+        assertEquals("4", Fizzbuzz(4).notDivisibleBy3())
 
     }
     @Test
-    fun fizzWhenDivisibleBy3() {
-        assertEquals("Fizz", Fizzbuzz(3).fizzbuzz())
-        assertEquals("Fizz", Fizzbuzz(6).fizzbuzz())
-        assertEquals("Fizz", Fizzbuzz(12).fizzbuzz())
+    fun divisibleBy3() {
+        assertEquals("Fizz", Fizzbuzz(3).divisibleBy3())
+        assertEquals("Fizz", Fizzbuzz(6).divisibleBy3())
+        assertEquals("Fizz", Fizzbuzz(12).divisibleBy3())
     }
 }
