@@ -15,4 +15,8 @@ class FizzbuzzShould {
         assertEquals("2", fizzbuzz(2))
         assertEquals("4", fizzbuzz(4))
     }
+    @Test
+    fun fizzWhenDivisibleBy3() {
+        assertEquals("Fizz", fizzbuzz(3))
+    }
 }
