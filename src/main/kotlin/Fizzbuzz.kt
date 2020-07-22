@@ -1,32 +1,27 @@
 class Fizzbuzz(private val num: Int = 0) {
 
-    var result = ""
-
-    fun divisibleBy3(): String {
-        if (num % 3 == 0) { result += "Fizz" }
-        return result
+    private fun divisibleBy3(): String {
+        if (num % 3 == 0) { return "Fizz" }
+        return ""
     }
 
-    fun divisibleBy5(): String {
-        if(num % 5 == 0) { result += "Buzz" }
-        return result
+    private fun divisibleBy5(): String {
+        if(num % 5 == 0) { return "Buzz" }
+        return ""
     }
 
-    fun divisibleBy3And5(): String {
-        divisibleBy3()
-        divisibleBy5()
-        return result
+    private fun divisibleBy3And5(): String {
+        return divisibleBy3() + divisibleBy5()
     }
 
-    fun notDivisible(): String {
+    private fun notDivisible(): String {
         return num.toString()
     }
 
     fun fizzBuzz(): String {
-        divisibleBy3And5()
+        var result = divisibleBy3And5()
         if(result != "") { return result }
         return notDivisible()
     }
 
 }
-
