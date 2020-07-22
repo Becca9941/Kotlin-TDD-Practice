@@ -1,13 +1,17 @@
-fun fizzbuzz(num: Int): String {
-    return divisibleBy3(num)
-}
+class Fizzbuzz(private val num: Int = 0) {
 
-fun divisibleBy3(num: Int): String {
-    if (num % 3 == 0) { return "Fizz" }
-    return notDivisible(num)
-}
+    fun fizzbuzz(): String {
+       return divisibleBy3()
+    }
 
-fun notDivisible(num: Int): String {
-    return num.toString()
+    private fun divisibleBy3(): String {
+        if (num % 3 == 0) { return "Fizz" }
+        return notDivisible()
+    }
+
+    private fun notDivisible(): String {
+        return num.toString()
+    }
+
 }
 
