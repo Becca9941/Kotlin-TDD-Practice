@@ -6,5 +6,6 @@ class LeapYearShould {
     fun divisibleByFour() {
         assertEquals(true, checkIfLeapYear(2000))
         assertEquals(false, checkIfLeapYear(2001))
+        assertEquals(true, checkIfLeapYear(2004))
     }
 }
