@@ -14,4 +14,8 @@ class LeapYearShould {
             assertEquals(false, checkIfLeapYear(it))
         }
     }
+    @Test
+    fun divisibleBy400() {
+        assertEquals(true, checkIfLeapYear(2000))
+    }
 }
