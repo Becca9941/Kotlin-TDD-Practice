@@ -4,8 +4,8 @@ import org.junit.Test
 class LeapYearShould {
     @Test
     fun divisibleByFour() {
-        assertEquals(true, checkIfLeapYear(2000))
-        assertEquals(false, checkIfLeapYear(2001))
-        assertEquals(true, checkIfLeapYear(2004))
+        mapOf(2000 to true, 2001 to false, 2004 to true).entries.forEach {
+            assertEquals(it.value, checkIfLeapYear(it.key))
+        }
     }
 }
