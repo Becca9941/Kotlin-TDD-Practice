@@ -1,6 +1,7 @@
 fun checkIfLeapYear(year: Int): Boolean {
-    if(divisibleBy4(year) && !divisibleBy100(year) ||
-       divisibleBy100(year) && divisibleBy400(year)) { return true }
+    if(divisibleBy400(year)) { return true }
+    if(divisibleBy100(year)) { return false }
+    if(divisibleBy4(year)) { return true }
     return false
 }
 
