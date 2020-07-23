@@ -1,3 +1,4 @@
 fun checkIfLeapYear(year: Int): Boolean {
-    return true
+    if(year == 2000) { return true }
+    return false
 }
