@@ -10,6 +10,8 @@ class LeapYearShould {
     }
     @Test
     fun divisibleBy100() {
-        assertEquals(false, checkIfLeapYear(2100))
+        arrayOf(2100, 2200, 2300).forEach {
+            assertEquals(false, checkIfLeapYear(it))
+        }
     }
 }
