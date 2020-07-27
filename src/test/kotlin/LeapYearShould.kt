@@ -9,13 +9,13 @@ class LeapYearShould {
         }
     }
     @Test
-    fun andNotDivisibleBy100() {
+    fun notBeDivisibleBy100() {
         arrayOf(2100, 2200, 2300).forEach {
             assertEquals(false, checkIfLeapYear(it))
         }
     }
     @Test
-    fun exceptWhenAlsoDivisibleBy400() {
+    fun BeDivisibleBy400IfDivisibleBy100() {
         arrayOf(2000, 2400, 2800).forEach {
             assertEquals(true, checkIfLeapYear(it))
         }
